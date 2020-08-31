@@ -7,4 +7,4 @@ describe Codebreaker do
    it "Validar que el rspec funcione con un Hello World" do
        expect( myCodebreaker.hello() ).to match /Hello World/
    end
-   
+end

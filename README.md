@@ -15,6 +15,12 @@ git push
 ```
 
 - - -
+## Q&A
+
+· Estoy haciendo el setup de features a mano basado en el proyecto de Juan (ej: copye el template a mano)
+  ¿hay algún comando de inicializción como "> rspec --init" ?
+
+- - -
 ## BAKCLOG
 
 Validar entorno RB, TDD, ATDD con un "Hello World"
