@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatea con Kleer</title>
+    <title>Bienvenido a Codebreaker</title>
 </head>
 <body>
-    <h1 id="nombre">Chatea con Kleer</h1>
-    <form action="/chat" method="post">
-        <input type="radio" name="idioma" id="es" value="Español" checked/>
-        <label for="es"> Español</label>
-        <input type="radio" name="idioma" id="en" value="English"/>
-        <label for="en"> English</label>
-        <input type="submit" value="Iniciar"/>
+    <h1>Bienvenido a Codebreaker</h1>
+    <form action="/" method="post">
+        <input type="text" name="numero" id="numero"/>
+        <input type="submit" value="Arriesgar"/>
     </form>
+    <div id="mensaje"><%=@mensaje%></div>
 </body>
 </html>

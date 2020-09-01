@@ -8,4 +8,8 @@ class Codebreaker
         "Hello World"
     end
 
+    def arriesgar(numero)
+        "Número incorrecto"
+    end
+    
 end

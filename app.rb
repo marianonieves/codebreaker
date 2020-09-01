@@ -2,12 +2,20 @@ require 'sinatra'
 require './config'
 require './lib/codebreaker'
 
-codebreaker = Codebreaker.new()
+codebreaker= nil
+codebreaker = Codebreaker.new
+
 get '/hello' do
     codebreaker.hello   
 end
+
 get '/' do
-    "Bienvenido a Codebreaker"
+    erb :index
+end
+
+post '/' do
+   @mensaje= codebreaker.arriesgar 8
+    erb :index
 end
 
 # ruby app.rb
