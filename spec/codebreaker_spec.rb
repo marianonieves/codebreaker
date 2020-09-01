@@ -1,4 +1,4 @@
-require './codebreaker'
+require './lib/codebreaker'
 
 describe Codebreaker do
 
