@@ -2,6 +2,12 @@ require 'sinatra'
 require './config'
 require './lib/codebreaker'
 
-get '/' do
-    "Hello World"
+codebreaker = Codebreaker.new()
+get '/hello' do
+    codebreaker.hello   
 end
+get '/' do
+    "Bienvenido a Codebreaker"
+end
+
+# ruby app.rb
