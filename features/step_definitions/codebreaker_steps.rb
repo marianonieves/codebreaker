@@ -7,11 +7,15 @@ Then("muestra {string}") do |cadena|
     expect(page.body).to match /#{text}/m
 end
 
-Given("inicio la aplicación con numero secreto {int}") do |secreto|
-    visit '/'
+Given("Asigno numero secreto {int}") do |secreto|
+#    puts "DEBUG :::: codebreaker_steps > secreto= #{secreto}"
+    visit "/inicio/#{secreto}"
 end
+
+
   
 When("arriesga {int}") do |valor|
+    visit "/"
     fill_in "numero", :with => valor
     click_button "Arriesgar"
 end

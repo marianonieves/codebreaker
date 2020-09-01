@@ -25,12 +25,17 @@ git push
 ```
 
 - - -
-## Q&A
+## Q&A lessons learned
 
 · Estoy haciendo el setup de features a mano basado en el proyecto de Juan (ej: copye el template a mano)
   ¿hay algún comando de inicializción como "> rspec --init" ?
 
 · When("inicio la aplicación") do <- acentos?
+
+· Cada vez que hago un refactor rompo algún test
+
+· Me concentré en los tests de cucumber, pero ahora tengo los tests de spec vacios.
+
 
 
 - - -
