@@ -6,6 +6,8 @@
           1,
           1,
           1,
+          1,
+          null,
           null,
           1,
           1,
@@ -15,12 +17,12 @@
           null,
           null,
           1,
-          null,
+          6,
           6,
           null,
           null,
           1,
-          null,
+          2,
           2,
           null,
           null,
@@ -54,6 +56,8 @@
       },
       "/CSD/projects/codebreaker/lib/codebreaker.rb": {
         "lines": [
+          1,
+          null,
           null,
           1,
           null,
@@ -89,6 +93,23 @@
           null
         ]
       },
+      "/CSD/projects/codebreaker/lib/logero.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          8,
+          8,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/CSD/projects/codebreaker/features/step_definitions/codebreaker_steps.rb": {
         "lines": [
           null,
@@ -105,8 +126,6 @@
           2,
           null,
           null,
-          null,
-          null,
           1,
           2,
           2,
@@ -119,6 +138,6 @@
         ]
       }
     },
-    "timestamp": 1598984343
+    "timestamp": 1598987967
   }
 }

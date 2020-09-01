@@ -11,8 +11,6 @@ Given("Asigno numero secreto {int}") do |secreto|
 #    puts "DEBUG :::: codebreaker_steps > secreto= #{secreto}"
     visit "/inicio/#{secreto}"
 end
-
-
   
 When("arriesga {int}") do |valor|
     visit "/"

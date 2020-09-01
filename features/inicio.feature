@@ -26,8 +26,6 @@ Feature: Inicio de la aplicación
 
 # Scenario: Número de 4 cifras y que ninguno coincida
 
-# Scenario: Número de 4 cifras y que ninguno coincida
-
 # Scenario: Que me indique si el número está
 
 # Scenario: Que me indique si el numero está en el lugar correcto

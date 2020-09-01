@@ -1,6 +1,8 @@
 require 'sinatra'
 require './config'
 require './lib/codebreaker'
+require './lib/logero'
+
 
 codebreaker= nil
 codebreaker = Codebreaker.new
@@ -10,12 +12,12 @@ get '/hello' do
 end
 
 get '/' do
-#    puts "DEBUG :::: app :: estoy en GET de /"
+    Logero.log("app.rb","estoy en GET de /")
     erb :index
 end
 
 get '/inicio/:secretNumber' do |secretNumber|
-#    puts "DEBUG :::: app :: get de secretNumber= #{secretNumber}"
+    Logero.log("app.rb","get de secretNumber= #{secretNumber}")
     codebreaker.definoNumeroGanador( secretNumber )
 end
 

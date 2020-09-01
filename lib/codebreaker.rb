@@ -1,3 +1,5 @@
+require './lib/logero'
+
 # responde automáticamente las consultas en el sitio
 class Codebreaker
 
@@ -5,6 +7,7 @@ class Codebreaker
     secretNumber = DEFAULT_SECRET_NUMBER
 
     def initialize
+        definoNumeroGanador(DEFAULT_SECRET_NUMBER)
     end
 
     def hello
@@ -12,22 +15,27 @@ class Codebreaker
     end
 
     def definoNumeroGanador(numero)
-        if numero
-            @secretNumber = numero
-        else
-            @secretNumber = @DEFAULT_SECRET_NUMBER
-        end
- #    puts "DEBUG :::: codebreaker > definoNumeroGanador() es #{@secretNumber.to_s}"
+        @secretNumber = numero
+        Logero.log("codbreaker","definoNumeroGanador() es #{@secretNumber}")
     end
 
 
     def arriesgar(numero)
 #    puts "DEBUG :::: codebreaker > arriesgar() secretNumber:#{@secretNumber} == numero:#{numero}"
-        if @secretNumber.to_i == numero.to_i
-            "Número correcto: #{numero}"
+        
+        if ( numero.to_s =~ /\A[-+]?[0-9]*\.?[0-9]+\Z/ )
+
+            Logero.log("codbreaker","arriesgar() , secret=#{@secretNumber.to_s} , numero=#{numero.to_s}")
+
+            if @secretNumber.to_s == numero.to_s
+                "Número correcto: #{numero}"
+            else
+                "Número incorrecto: #{numero}"
+            end
         else
-            "Número incorrecto: #{numero}"
+            "El número no es valido"
         end
+
     end
 
 end
