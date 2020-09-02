@@ -16,9 +16,16 @@ get '/' do
     erb :index
 end
 
+get '/reset' do
+    Logero.log("app.rb","estoy en GET de /")
+    codebreaker.resetSecretNumber()
+    erb :index
+end
+
+
 get '/inicio/:secretNumber' do |secretNumber|
     Logero.log("app.rb","get de secretNumber= #{secretNumber}")
-    codebreaker.definoNumeroGanador( secretNumber )
+    codebreaker.setSecretNumber( secretNumber )
 end
 
 
@@ -26,6 +33,7 @@ post '/' do
     puts "app :: estoy en POST de /"
     if params[:numero]
         @mensaje= codebreaker.arriesgar params[:numero]
+        @secretNumber = codebreaker.getSecretNumber()
     end
     erb :index
 end

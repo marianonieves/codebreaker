@@ -8,22 +8,31 @@ class Codebreaker
     secretNumberArr = DEFAULT_SECRET_NUMBER.to_s.split('')
 
     def initialize
-        definoNumeroGanador(DEFAULT_SECRET_NUMBER)
+        resetSecretNumber()
     end
 
     def hello
         "Hello World"
     end
 
-    def definoNumeroGanador(numero)
+    def resetSecretNumber()
+        numero = rand.to_s[2..5] 
+        setSecretNumber(numero)
+    end
+
+    def setSecretNumber(numero)
         @secretNumber = numero
         @secretNumberArr = numero.to_s.split('')
-#        Logero.log("codbreaker","definoNumeroGanador() es #{@secretNumber}")
+#        Logero.log("codbreaker","setSecretNumber() es #{@secretNumber}")
+    end
+
+    def getSecretNumber()
+        return @secretNumber
     end
 
     def validarNumero(numero)        
         if ( numero.to_s.length == 4 )
-            Logero.log("codbreaker","validarNumero() , #{numero.to_s} tiene cuatro digitos ")
+#            Logero.log("codbreaker","validarNumero() , #{numero.to_s} tiene cuatro digitos ")
             return true
         end
 
@@ -39,22 +48,26 @@ class Codebreaker
             if @secretNumberArr[i]==aNumero[i]
                 result.push(aNumero[i])
             else
-                result.push('*')
+                if @secretNumberArr.include? aNumero[i].to_s
+                    result.push('!')
+                else
+                    result.push('_')
+                end
             end
         end
 
         Logero.log("codbreaker","detalleIncorrecto() , secret=#{@secretNumber.to_s} , numero=#{sNumero}")
-        "Número Incorrecto: #{result.join('')}"
+        "#{sNumero} es Incorrecto: #{result.join('')}"
     end
 
     def arriesgar(numero)
         
         if validarNumero(numero)
 
-            Logero.log("codbreaker","arriesgar() , secret=#{@secretNumber.to_s} , numero=#{numero.to_s}")
+#            Logero.log("codbreaker","arriesgar() , secret=#{@secretNumber.to_s} , numero=#{numero.to_s}")
 
             if @secretNumber.to_s == numero.to_s
-                "Número correcto: #{numero}"
+                "GANASTE: #{numero}"
             else
                 return detalleIncorrecto(numero)
             end

@@ -7,11 +7,23 @@
 </head>
 <body>
     <h1>Bienvenido a Codebreaker</h1>
-    <pre>Adivina el número de 4 digitos</pre>
+    <pre>Adivina el NÚMERO SECRETO de 4 digitos generado al azar ( rand.to_s[2..5] )</pre>
     <form action="/" method="post">
-        <input type="text" name="numero" id="numero"/>
+        <input type="text" name="numero" id="numero" maxlength="4" />
         <input type="submit" value="Arriesgar"/>
     </form>
     <div id="mensaje"><%=@mensaje%></div>
+<pre>
+DETALLES:
+ N <- Si el digito es acertado y está en la posición correcta aparecerá el número
+ ! <- Si el digito está en el NÚMERO SECRETO pero pero no está en la posición correcta
+ _ <- Cuando el dígito no está en el NÚMERO SECRETO
+
+ 
+ 
+ 
+ <a href=/reset>Click acá</a> para resetear el NUMERO SECRETO
+</pre>
+<!--  <%=@secretNumber%>  -->
 </body>
 </html>
