@@ -1,6 +1,6 @@
 class Logero
 
-  @@enable=true
+  @@enable=false
   
   def self.log(context, message)
     if(@@enable)

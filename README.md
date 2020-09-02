@@ -47,7 +47,7 @@ git push
 
 
 - - -
-## BAKCLOG
+## BACKLOG
 
 + Validar entorno RB, TDD, ATDD con un "Hello World"
 + Bienvenido a Codebreaker
