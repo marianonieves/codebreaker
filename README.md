@@ -36,7 +36,11 @@ git push
 ? Cada vez que hago un Refactor rompo algún test. es como un circulo vicioso, 
   ¿con experiencia eso se disminuye?
 
-· Primero me concentré en los tests de cucumber, y de golpe me encontre con los tests de spec vacios.
+· Según la interación, Primero me concentro en los tests de cucumber y después los de rspec, o al revés
+
+· Me cuesta pensar los tests primero, suelo tener la solución en la cabeza
+
+· ¿es una contra?: Es mucho el refactor entre iteración e iteración por pensar en el valor agregado del incremento en lugar del todo
 
 · Me hice mi tool para debug (Logero) para hacer más rápido, hay algúna librería standard que recomienden? me sirve para aprender y no perderme. Ejemplo: Logero.log("app.rb","estoy en GET de /")
 

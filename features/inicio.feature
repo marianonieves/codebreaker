@@ -8,21 +8,27 @@ Feature: Inicio de la aplicación
     When inicio la aplicación
     Then muestra "Bienvenido a Codebreaker"
 
-    Scenario: - - - - Adivinar un número de una cifra 5 y que NO coincida porque arriesgo 8
+#   Scenario: - - - - Adivinar un número de una cifra 5 y que NO coincida porque arriesgo 8
+#   Given inicio la aplicación
+#   Given Asigno numero secreto 5
+#   When arriesga 8
+#   Then muestra mensaje "Número incorrecto"
+
+#   Scenario: - - - - Adivinar un número de una cifra 6 y que SI coincida porque arriesgo 6
+#   Given inicio la aplicación
+#   Given Asigno numero secreto 6
+#   When arriesga 6
+#   Then muestra mensaje "Número correcto: 6"
+
+
+
+    Scenario: Número de 4 cifras y Que todos coincidan
     Given inicio la aplicación
-    Given Asigno numero secreto 5
-    When arriesga 8
-    Then muestra mensaje "Número incorrecto"
+    Given Asigno numero secreto 1256
+    When arriesga 1256
+    Then muestra mensaje "Número correcto: 1256"
 
-    Scenario: - - - - Adivinar un número de una cifra 6 y que SI coincida porque arriesgo 6
-    Given inicio la aplicación
-    Given Asigno numero secreto 6
-    When arriesga 6
-    Then muestra mensaje "Número correcto: 6"
-
-
-
-# Scenario: Número de 4 cifras y Que todos coincidan
+    
 
 # Scenario: Número de 4 cifras y que ninguno coincida
 
